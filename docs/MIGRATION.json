@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "slug": "jsonl-stream-audit",
+  "domain": "data",
+  "guidance_group": "strong",
+  "source_commit": "1286096c10a23bbb04aca83679ae3c31f3326030",
+  "source_repository": "mytestapp20261001-collab/mytest-engineering-toolbox",
+  "source_repository_id": 1411411288,
+  "source_path": "tools/jsonl-stream-audit",
+  "root_path": ".",
+  "publication_status": "prepared_only; coordinator verifies final repository identity and remote CI",
+  "expected_repository": "mytestapp20261001-collab/jsonl-stream-audit",
+  "repository_id": null,
+  "preserved_files": [
+    {
+      "path": "OPTIONAL_MYTEST.md",
+      "size_bytes": 1475,
+      "sha256": "1abd2c34f485ecf360b7085ea52aad57ea02249f43e6465d075a8cfb5c77cf70",
+      "git_blob_sha1": "3c19ce9b618e26b8836591b37c4430589db71299",
+      "utf8": true,
+      "source_path": "tools/jsonl-stream-audit/OPTIONAL_MYTEST.md"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 4825,
+      "sha256": "2041ed78c1b90d12a95d97ccd3bef793389af1cbdb38a6e97e8dc86665095d1d",
+      "git_blob_sha1": "40ea03c7be54bdd1013f85807f50de01d0e8e469",
+      "utf8": true,
+      "source_path": "tools/jsonl-stream-audit/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "size_bytes": 4414,
+      "sha256": "b8546a13823db9a4ef83be76eac04a8bc26cf6c6b31889ff648e4f0ba5e92435",
+      "git_blob_sha1": "d4147073e0a350de7e53427e645bbae7a333662a",
+      "utf8": true,
+      "source_path": "tools/jsonl-stream-audit/SKILL.md"
+    },
+    {
+      "path": "examples/fail.jsonl",
+      "size_bytes": 29,
+      "sha256": "379cade8ea48c6e4d30112704ffc46e3c05d26e50edff4d269cd31a501aa646a",
+      "git_blob_sha1": "765affb461900745a30b18d4735965d38d905f72",
+      "utf8": true,
+      "source_path": "tools/jsonl-stream-audit/examples/fail.jsonl"
+    },
+    {
+      "path": "examples/malformed.jsonl",
+      "size_bytes": 15,
+      "sha256": "e7e5a4bb64fb25c751fdab89e23e0c8e33f16207718ae4af8ea0260f05833500",
+      "git_blob_sha1": "9daedc93de50873136b7e3645a58612d09f20191",
+      "utf8": true,
+      "source_path": "tools/jsonl-stream-audit/examples/malformed.jsonl"
+    },
+    {
+      "path": "examples/pass.jsonl",
+      "size_bytes": 18,
+      "sha256": "c63f6dd68b68601e7315ea40d28bc34e55379e4fa65f82b1d32228429aeafcde",
+      "git_blob_sha1": "ceb82cd707453cb7c0c9ec108b8043b9fffe43fd",
+      "utf8": true,
+      "source_path": "tools/jsonl-stream-audit/examples/pass.jsonl"
+    },
+    {
+      "path": "test_tool.py",
+      "size_bytes": 6627,
+      "sha256": "2cea1da04b10f2de6e904c8b1f92a37a82b0a0bd0871ac9f7c31aa3863e94eb3",
+      "git_blob_sha1": "2f36fb4f110e4de187ccc573ada1c87342b0d5f1",
+      "utf8": true,
+      "source_path": "tools/jsonl-stream-audit/test_tool.py"
+    },
+    {
+      "path": "tool.py",
+      "size_bytes": 5013,
+      "sha256": "f091e5012e38eb04a96dd57edbec6348fe7764f58e775394cc95c7a067754984",
+      "git_blob_sha1": "7e9991ea37fc2f9fd5a6335dd377ac516083827c",
+      "utf8": true,
+      "source_path": "tools/jsonl-stream-audit/tool.py"
+    },
+    {
+      "path": "verification.json",
+      "size_bytes": 1094,
+      "sha256": "257065c7788e7c3ddf4be2c1758e50f4d0e1d12fe20cfb9c0861a9c95256dc08",
+      "git_blob_sha1": "d8b5ca7438769c29ead1ad38219a5f63f961059e",
+      "utf8": true,
+      "source_path": "tools/jsonl-stream-audit/verification.json"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1076,
+      "sha256": "dce76471613629e93f3f98b7aaa6f72ff9adb88204a3f83d3045952017ab2f46",
+      "git_blob_sha1": "677c4463d59b560db9c1fde1052eff6eefa6441a",
+      "utf8": true,
+      "source_path": "LICENSE"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 62,
+      "sha256": "e4d5aecc4cd36f593c2e7f3dad08b24261b13466b898004a445614058d29d8de",
+      "git_blob_sha1": "fe9f8fb619601213cbfef4f6eadb5d413d8f7f01",
+      "utf8": true,
+      "source_path": ".gitignore"
+    }
+  ],
+  "readme_checks": [
+    {
+      "label": "README example",
+      "args": [
+        "tool.py",
+        "examples/pass.jsonl"
+      ],
+      "expected_exit": 0,
+      "output": "json",
+      "documented_command": "python3 tool.py examples/pass.jsonl"
+    },
+    {
+      "label": "README example",
+      "args": [
+        "tool.py",
+        "examples/fail.jsonl"
+      ],
+      "expected_exit": 1,
+      "output": "json",
+      "documented_command": "python3 tool.py examples/fail.jsonl"
+    },
+    {
+      "label": "README example",
+      "args": [
+        "tool.py",
+        "examples/malformed.jsonl"
+      ],
+      "expected_exit": 1,
+      "output": "json",
+      "documented_command": "python3 tool.py examples/malformed.jsonl"
+    },
+    {
+      "label": "CLI help",
+      "args": [
+        "tool.py",
+        "--help"
+      ],
+      "expected_exit": 0,
+      "output": "help"
+    },
+    {
+      "label": "CLI missing input",
+      "args": [
+        "tool.py"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    },
+    {
+      "label": "CLI unknown argument",
+      "args": [
+        "tool.py",
+        "--unsupported-migration-test"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    }
+  ]
+}

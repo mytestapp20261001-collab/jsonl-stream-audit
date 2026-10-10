@@ -1,0 +1,39 @@
+{
+  "adversarial_cli_and_read_only_cases_in_tests": 22,
+  "all_expected_outcomes_verified": true,
+  "commands": [
+    {
+      "actual_exit": 0,
+      "command": "python3 tool.py examples/pass.jsonl",
+      "expected_exit": 0,
+      "output_sha256": "dfd68c50115162d3e6715088a9c60e236ce90b3a4906cb1c01f66b2a1c845746",
+      "status": "pass"
+    },
+    {
+      "actual_exit": 1,
+      "command": "python3 tool.py examples/fail.jsonl",
+      "expected_exit": 1,
+      "output_sha256": "5c867189226b3482c995f4c0ac5b0abbb34a899fc5b92e325c961fc2eef49667",
+      "status": "fail"
+    },
+    {
+      "actual_exit": 1,
+      "command": "python3 tool.py examples/malformed.jsonl",
+      "expected_exit": 1,
+      "output_sha256": "27e97f07397d2d344428594203f2873140346bfadd20d09ef37c9c1d3e91e650",
+      "status": "fail"
+    },
+    {
+      "actual_exit": 0,
+      "command": "python3 tool.py --help",
+      "expected_exit": 0
+    },
+    {
+      "actual_exit": 0,
+      "command": "python3 -m unittest -v test_tool.py",
+      "expected_exit": 0,
+      "test_count": 23
+    }
+  ],
+  "runtime": "3.12.14"
+}
